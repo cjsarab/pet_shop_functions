@@ -31,7 +31,7 @@ def get_stock_count(pet_shop):
 # def get_pets_by_breed(pet_shop, breed):
 #     pets = []
 #     for pet in pet_shop["pets"]:
-#         if [2] == breed:
+#         if "breed" == breed:
 #             pets.append(pet)
 #     return pets
 
@@ -47,3 +47,7 @@ def add_pet_to_stock(pet_shop,new_pet):
 
 def get_customer_cash(customers):
     return customers["cash"]
+
+def remove_customer_cash(customer, cash):
+    cash = customer["cash"] - cash
+    customer.update({"cash" : cash})
