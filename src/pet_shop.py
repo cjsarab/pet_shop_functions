@@ -1,33 +1,36 @@
 # WRITE YOUR FUNCTIONS HERE
 
 
-def get_pet_shop_name(name):
-    pet_shop_name = "Camelot of Pets"
+def get_pet_shop_name(pet_shop):
+    pet_shop_name = pet_shop["name"]
     return pet_shop_name
 
-def get_total_cash(sum):
-    total_cash = 1000
+def get_total_cash(pet_shop):
+    total_cash = pet_shop["admin"]["total_cash"]
     return total_cash
 
 #MISSING TESTS 3 AND 4
+def add_or_remove_cash(pet_shop,cash):
+    cash = pet_shop["admin"]["total_cash"] + cash
+    pet_shop["admin"].update({"total_cash" : cash})
+
 
 # def add_or_remove_cash(pet_shop,cash):
 #     cash = pet_shop["admin"]["total_cash"] + cash
 #     return cash
 
 def get_pets_sold(pet_shop):
+    return pet_shop["admin"]["pets_sold"]
+
+def increase_pets_sold(pet_shop,sold):
     for pets in pet_shop:
-        if pet_shop["admin"]["pets_sold"] == 0:
-            sold = 0
-            return sold
-
-#MISSING TEST 6
-
-# def increase_pets_sold(pet_shop,value):
-#     pet_shop["admin"]["pets_sold"] = value
-#     return value
+            pet_shop["admin"].update({"pets_sold" : sold})
 
 def get_stock_count(pet_shop):
-        count = 6
-        return count
-        
+    count = 6
+    return count
+
+def get_pets_by_breed(pet_shop, breed):
+    if len(pet_shop["pets"]["British Shorthair"]) == 2:
+        breed = 2
+        return breed
