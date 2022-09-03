@@ -28,12 +28,13 @@ def get_stock_count(pet_shop):
 
 #MISSING TESTS 8 + 9
 
-# def get_pets_by_breed(pet_shop, breed):
-#     pets = []
-#     for pet in pet_shop["pets"]:
-#         if "breed" == breed:
-#             pets.append(pet)
-#     return pets
+def get_pets_by_breed(pet_shop,breed):
+    pets = []
+    for pet in pet_shop["pets"]:
+        if breed == pet["breed"]:
+            pets.append(pet)
+    return pets
+
 
 #MISSING TESTS 10 + 11 + 12
 # def find_pet_by_name(pet_shop, name):
