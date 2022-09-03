@@ -26,8 +26,6 @@ def increase_pets_sold(pet_shop,sold):
 def get_stock_count(pet_shop):
     return len(pet_shop["pets"])
 
-#MISSING TESTS 8 + 9
-
 def get_pets_by_breed(pet_shop,breed):
     pets = []
     for pet in pet_shop["pets"]:
@@ -35,13 +33,10 @@ def get_pets_by_breed(pet_shop,breed):
             pets.append(pet)
     return pets
 
-
-#MISSING TESTS 10 + 11 + 12
-# def find_pet_by_name(pet_shop, name):
-#     for pet in pet_shop:
-#         for name in pet:
-#             if name == pet_shop["pets"]["name"]:
-#                 return name
+def find_pet_by_name(pet_shop,name):
+    for pet in pet_shop["pets"]:
+        if name == pet["name"]:
+            return pet
 
 def add_pet_to_stock(pet_shop,new_pet):
     pet_shop["pets"].append(new_pet)
