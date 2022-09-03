@@ -17,12 +17,10 @@ def get_pets_sold(pet_shop):
     return pet_shop["admin"]["pets_sold"]
 
 def increase_pets_sold(pet_shop,sold):
-    for pets in pet_shop:
-            pet_shop["admin"].update({"pets_sold" : sold})
+    pet_shop["admin"].update({"pets_sold" : sold})
 
 def get_stock_count(pet_shop):
-    count = 6
-    return count
+    return len(pet_shop["pets"])
 
 def get_pets_by_breed(pet_shop, breed):
     if len(pet_shop["pets"]["British Shorthair"]) == 2:
