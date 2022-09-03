@@ -9,15 +9,9 @@ def get_total_cash(pet_shop):
     total_cash = pet_shop["admin"]["total_cash"]
     return total_cash
 
-#MISSING TESTS 3 AND 4
 def add_or_remove_cash(pet_shop,cash):
     cash = pet_shop["admin"]["total_cash"] + cash
     pet_shop["admin"].update({"total_cash" : cash})
-
-
-# def add_or_remove_cash(pet_shop,cash):
-#     cash = pet_shop["admin"]["total_cash"] + cash
-#     return cash
 
 def get_pets_sold(pet_shop):
     return pet_shop["admin"]["pets_sold"]
