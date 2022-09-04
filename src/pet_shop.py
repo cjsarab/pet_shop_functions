@@ -1,10 +1,5 @@
 # WRITE YOUR FUNCTIONS HERE
 
-
-import numbers
-import re
-
-
 def get_pet_shop_name(pet_shop):
     pet_shop_name = pet_shop["name"]
     return pet_shop_name
@@ -67,3 +62,20 @@ def customer_can_afford_pet(customer,new_pet):
         return True
     else:
         return False
+
+#INTEGRATION TESTS
+
+def sell_pet_to_customer(pet_shop,pet,customer):
+    if pet["name"] != pet_shop["pets"]["name"]:
+        return
+    elif customer["cash"] < pet["price"]:
+        return
+    else:
+        new_cash = customer["cash"] - pet["price"]
+        customer.update({"cash" : new_cash})
+        customer.append(pet)
+
+
+
+
+
